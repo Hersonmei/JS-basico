@@ -1,22 +1,22 @@
 
-// var a = true;
-// var b = true;
+
+var str = "Valor \"texto entre aspas\" qualquer";
+
+console.log(str)
 
 
-// var c = a && b;
+// Adição se tratando de string, vai ser uma concatenação.
+var string = "Valor qualquer";
+string += " outro texto";
+
+console.log(string)
 
 
-// console.log(c)
 
+// Sempre que aparecer no console azul, vai ser um número. É possível fazer essa soma de uma string com um número, no entando vai ser uma concatenação na verdade, não uma soma em si. Tanto que o número 8 deixa de ser azul e fica preto.
+var numero = 8;
+var string = "Valor qualquer";
+string += " outro texto " + numero;
 
-var idade = 67;
-
-var menor10 = idade <= 10;
-var maior65 = idade >= 65;
-
-var gratuidade = menor10 || maior65;
-
-console.log("Idade", idade)
-console.log("Menor que 10", menor10)
-console.log("Maior que 65", maior65)
-console.log("Tem direito a gratuidade", gratuidade)
+console.log(numero)
+console.log(string)
