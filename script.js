@@ -1,16 +1,16 @@
 
-// O SE tbm pode utilizar o e (&&) e o ou (||)
+var idade = 25;
 
-var idade = 71;
+idade >= 18 ? console.log("Pode") : console.log("Não Pode")
 
-if (idade >= 18 && idade <= 70){
-    console.log("Pode!")
-    console.log("Qual o seu pedido?")
-}
+// ou
 
+var pode = idade >= 18 ? true : false;
+console.log(pode)
 
+// ou
 
-else {
-    console.log("não pode")
-    console.log("volte futuramente")
-}
+var permitir = idade >= 18 ? "Pode" : "Não pode";
+console.log(permitir)
+
+// Essas são formas passadas na aula para utilizar o operador ternário, que em algumas situações pode substituir o Else. Lembrar que tudo que vem após a interrogação é o verdadeiro e tudo que vem após os dois pontos é caso seja falso.
