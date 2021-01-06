@@ -1,15 +1,15 @@
 
-var idade = 44;
+// O SE tbm pode utilizar o e (&&) e o ou (||)
 
-if (idade >= 35){
+var idade = 71;
+
+if (idade >= 18 && idade <= 70){
     console.log("Pode!")
     console.log("Qual o seu pedido?")
 }
 
-else if (idade >= 18){
-    console.log("pode")
-    console.log("Mostre a identidade!")
-}
+
+
 else {
     console.log("não pode")
     console.log("volte futuramente")
