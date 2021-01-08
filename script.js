@@ -1,45 +1,39 @@
-var nota1 = 6.0;
-var nota2 = 8.0;
+var numero = 5;
 
-var media = (nota1 + nota2) / 2;
+for(var i = 0; i < numero; i++){
 
-var conceito = "";
+    console.log("Executando o for, pela " + i + " vez");
 
-
-if(media >= 8){
-    conceito = "ótimo";
-}
-
-else if (media >= 6.5){
-    conceito = "bom";
-}
-
-else{
-    conceito = "regular";
 
 }
 
-conceito = "Mais ou menos";
-
-console.log(media);
-
-console.log(conceito);
+ console.log("acabou");
 
 
+ var numero1 = 5;
+
+for(var j = 3; j < numero; j++){
+
+    console.log("Executando o for, pela " + j + " vez");
 
 
-switch(conceito){
-
-    case "ótimo":
-        console.log("Parabéns, você é um ótimo aluno");
-        break
-    case "bom":
-        console.log("Você está quase perfeito");
-        break
-    case "regular":
-        console.log("Estude mais um pouco");
-        break
-   default: 
-   console.log("Houve algum erro");
-        break
 }
+
+ console.log("acabou");
+
+
+
+ var numero2 = 5;
+
+for(var k = 10; k < numero; k++){
+
+    console.log("Executando o for, pela " + k + " vez");
+
+
+}
+
+ console.log("acabou");
+
+//  Nesse exemplo, colocamos a variável k para repetir desse número até menor que a variável número. Quando o resultado for verdadeiro ela vai mostrar a mensagem do console log até o valor, depois quando ficar negativa, vai mostrar o valor do console fora da chave.
+
+// No primeiro exemplo normal, no segundo ele começa a contagem a partir do 3, mostrando só dois resultados, e no terceiro exemplo, como o k é 10, maior que 5, não vai mostrar nada e vai direto para o acabou.
