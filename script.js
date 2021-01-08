@@ -1,16 +1,45 @@
+var nota1 = 6.0;
+var nota2 = 8.0;
 
-var idade = 25;
+var media = (nota1 + nota2) / 2;
 
-idade >= 18 ? console.log("Pode") : console.log("Não Pode")
+var conceito = "";
 
-// ou
 
-var pode = idade >= 18 ? true : false;
-console.log(pode)
+if(media >= 8){
+    conceito = "ótimo";
+}
 
-// ou
+else if (media >= 6.5){
+    conceito = "bom";
+}
 
-var permitir = idade >= 18 ? "Pode" : "Não pode";
-console.log(permitir)
+else{
+    conceito = "regular";
 
-// Essas são formas passadas na aula para utilizar o operador ternário, que em algumas situações pode substituir o Else. Lembrar que tudo que vem após a interrogação é o verdadeiro e tudo que vem após os dois pontos é caso seja falso.
+}
+
+conceito = "Mais ou menos";
+
+console.log(media);
+
+console.log(conceito);
+
+
+
+
+switch(conceito){
+
+    case "ótimo":
+        console.log("Parabéns, você é um ótimo aluno");
+        break
+    case "bom":
+        console.log("Você está quase perfeito");
+        break
+    case "regular":
+        console.log("Estude mais um pouco");
+        break
+   default: 
+   console.log("Houve algum erro");
+        break
+}
