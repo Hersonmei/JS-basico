@@ -9,9 +9,30 @@ return media
 
 }
 
-var resultado1 = media(6, 7);
-var resultado2 = media(10, 9);
+var resultado = media(6, 7);
+var m = media;
 
-console.log(resultado1 + " e " + resultado2 );
 
-// Pra mim não ficou muito claro esse função return na função, lembrar que o Igor disse que a função ela pode (receber argumentos) e ela pode (retornar um valor). Acredito que no caso do git anterior, só de função, ele pegava as média que foram digitadas abaixo, nesse caso ele recebia valores, mas no caso desta aula, ele não recebe valores, ele só retornou o valor das média, e na variável de baixo, fora função, aí sim foram atribuídos os valores.
+var resultado2 = m(2, 3)
+
+console.log(resultado);
+console.log(resultado2);
+
+// Pornto, no primeiro caso, pelo que pude entender, vais er igual o da aula anterior, que a função eu posso executá-la e atribuir um resultado a ela, ou seja, retornar um resultado a ela. 
+
+//Ou eu posso nessa aula, que seria o resultado 2, atribuir a função a uma variável, no caso eu peguei a função (média) e atribuí a variável (m), depois sim eu peguei a variável m e dei os valores. Então, prova que dá certo, atribuir a função a uma variável.
+
+//Partindo desse pressuposto, no exemplo abaixo vamos atribuir a função diretamente a uma variável, nesse caso como já estamos fazendo isso diretamente, (NÃO PRECISAMOS DAR NOME A FUNÇÃO), logo ficaria assim:
+
+var media = function (n1, n2){
+
+    return (n1 + n2) / 2
+}
+
+var m = media (5, 6)
+
+console.log(m);
+
+// Ou podemos tbm declaralar o console.lo de uma maneira mais direta, sem necessidade de criar a variável (m).
+
+console.log(media (7, 8));
