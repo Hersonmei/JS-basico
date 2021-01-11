@@ -1,16 +1,14 @@
 
+function media(n1, n2) {
+var nota1 = n1;
+var nota2 = n2;
+var media = (nota1 + nota2) / 2;
 
-var alunos = ["Igor", "josé", "Marcos", "Mariana", "Ana"];
+console.log(media);
 
-
-for ( aluno in alunos){
-    console.log(aluno);
 }
 
-for (aluno of alunos){
-    console.log(aluno);
-}
+media(6, 7);
+media(10, 9);
 
-// Nessa aula vismo a utilização do arrais, que é uma forma de ter vários elementos que seriam variáveis, sem precisar criar uma quantidade enorme de variáveis.
-
-// Também tivemos o exemplo da utilização do for nos Arrays, onde no (in) ele vai mostrar o número do elemento da ordem, no caso o (índice), e utilizando (of), ele vai mostrar o conteúdo desse índice, que nesse caso é o nome do aluno.
+// Esse exemplo demostrando o uso de função, é que não preciso criar essas notas e calcular a média para cada aluno, eu escrovo só uma vez essa função e eu chamo quantas vezes precisar, se fosse 10 alunos, só ir acrescentando essas media no final e adicionar suas notas.
