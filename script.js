@@ -4,11 +4,14 @@ var nota1 = n1;
 var nota2 = n2;
 var media = (nota1 + nota2) / 2;
 
-console.log(media);
+
+return media
 
 }
 
-media(6, 7);
-media(10, 9);
+var resultado1 = media(6, 7);
+var resultado2 = media(10, 9);
 
-// Esse exemplo demostrando o uso de função, é que não preciso criar essas notas e calcular a média para cada aluno, eu escrovo só uma vez essa função e eu chamo quantas vezes precisar, se fosse 10 alunos, só ir acrescentando essas media no final e adicionar suas notas.
+console.log(resultado1 + " e " + resultado2 );
+
+// Pra mim não ficou muito claro esse função return na função, lembrar que o Igor disse que a função ela pode (receber argumentos) e ela pode (retornar um valor). Acredito que no caso do git anterior, só de função, ele pegava as média que foram digitadas abaixo, nesse caso ele recebia valores, mas no caso desta aula, ele não recebe valores, ele só retornou o valor das média, e na variável de baixo, fora função, aí sim foram atribuídos os valores.
