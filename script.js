@@ -26,12 +26,13 @@ console.log(aluno1.nome);
 console.log(aluno1.media(aluno1.notas[0], aluno1.notas[1])); 
 
 
-// A primeira modificação que podemos fazer é em relação a fução, caso eu queria alterar e não queria fazer a mudança em todos, por exemplo se for uma furma grande, eu posso tirar a função de dentro do objetivo, dar um nome a mesma, de media a média dentro do objeto vai chamar essa função. Ex. abaixo:
+//Nesse exemplo agora, nós iremos alterar para que a forma de exibição do console.log fique mais simplificada, pois no exemplo a cima temos muitas coisas escritas. Vamos mudar a função para deixá-las mais simplificadas. Ex. abaixo:
+
+//Lembrar que temos que o usar o (this.) na função, pois conforme o inglês ele aponta algo que está próximo. Então, se chamar só a função sem determinar o this, vai dar erro pois tem mais de uma nota, mas colocando o (this.) ele vai colocar o valor da função que está dentro do objeto, sendo então o valor mais próximo.
 
 
-
-function calcMedia(n1, n2){   
-    return (n1 + n2) / 2; 
+function calcMedia(){   
+    return (this.notas[0] + this.notas[1]) / 2;
 
 } 
 
@@ -51,8 +52,9 @@ notas : [5, 8],
 media: calcMedia
 }   
 
+
 console.log(aluno2.nome); 
-console.log(aluno2.media(aluno2.notas[0], aluno2.notas[1])); 
+console.log(aluno2.media()); 
 
 console.log(aluno3.nome); 
-console.log(aluno3.media(aluno3.notas[0], aluno3.notas[1])); 
+console.log(aluno3.media()); 
