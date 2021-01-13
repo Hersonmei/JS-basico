@@ -1,19 +1,24 @@
-//Ressaltar, que o objeto é como se fosse um arrais, mas os elementos deles não são variáveis mas sim chamados de (propriedades), e podem ter qualquer tipo de valor, pode ser até mesmo um Arrays ou mesmo outro objeto.
 
-var aluno = {nome: "Igor", 
-            nota1: 8.0,  
-            conceitos: ["bom", "ruim"],
+
+var aluno = {
+            nome: "Herson", 
+            notas : [7.5, 8.0] 
+            
 }            
 
+aluno.matricula = 12345;
 
 
-console.log(aluno.nota1); 
+aluno["sobrenome"] = "Meireles";
 
-console.log(aluno.nome);
 
-console.log(aluno["nome"]); 
+var novaProp = "nome do meio"; //Essa e de baixo são só 1 forma a mais de inserir propriedade.
 
-//Isso mostra que o objeto e o arrays são muito parecidos, diferença vai ser que ao invés de usar o index, eu sou usar uma chave. Mesmo aquele item que está entre [], se fosse arrays colocaria a posição 0,1,2.., mas nesse caso em coloco a chave.
+aluno[novaProp] = "Alexandre";
 
-console.log(aluno.conceitos[0]); 
-//Exemplo usando um arrays.
+
+
+console.log(aluno); 
+
+//Esses (3) exemplos acima, são duas formas de inserir propriedades no meu objetivo mesmo após ele criado.
+
