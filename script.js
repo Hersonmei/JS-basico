@@ -1,36 +1,19 @@
+//Ressaltar, que o objeto é como se fosse um arrais, mas os elementos deles não são variáveis mas sim chamados de (propriedades), e podem ter qualquer tipo de valor, pode ser até mesmo um Arrays ou mesmo outro objeto.
 
-//Nome do aluno - nota 1 - nota 2 - média - Aprovado/Reprovado
-
-var nomes = ["Igor", "José", "Maria"]
-var notasA = [7.0, 6.5, 9.5]
-var notasB = [8.0, 7.0, 8.5]
-
-
-function media(n1, n2){
-        return (n1 + n2) / 2;
-}
-
-
-function passou(media){
-
-    if (media > 7) {
-        return "Aprovado";
-    } 
-    else {
-        return "Reprovado"
-    }
-
-}
+var aluno = {nome: "Igor", 
+            nota1: 8.0,  
+            conceitos: ["bom", "ruim"],
+}            
 
 
 
-for (var index in nomes) {
+console.log(aluno.nota1); 
 
-    var nota1 = notasA[index];  //criou-se essas variáveis, para tirar ela da fóruma abaixo, deixando mais simples.
-    var nota2 = notasB[index];
+console.log(aluno.nome);
 
-    var m =  media(nota1, nota2)
+console.log(aluno["nome"]); 
 
-    console.log(nomes[index] + " - " + nota1 + " - " + nota2 +  " - " + m + " - " + passou(m));
+//Isso mostra que o objeto e o arrays são muito parecidos, diferença vai ser que ao invés de usar o index, eu sou usar uma chave. Mesmo aquele item que está entre [], se fosse arrays colocaria a posição 0,1,2.., mas nesse caso em coloco a chave.
 
-}
+console.log(aluno.conceitos[0]); 
+//Exemplo usando um arrays.
