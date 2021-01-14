@@ -11,27 +11,34 @@
 //     }
 // }
 
-
-function
-
+//O próximo passo de aula, vai ser transformar a função acima que retorna um objeto em um objeto de verdade.
 
 
+function aluno(nome, n1, n2){
 
-var turma = [
-    criarAluno("Herson", 9, 6),
-    criarAluno("Joao", 10, 5),
-    criarAluno("Marcela", 9, 8)
-]
+    this.nome = nome;
+    this.nota1 = n1;
+    this.nota2 = n2;
 
-var aluno = turma[0];
-
-//Para criar uma lista com o resultado em lista, devo utilizar o for, apresentado abaixo de uma forma mais simples como aprendemos anterioremente e depois aprensentando de uma forma mais elaborado, que vai ser utilizado mais na frente também.
-
-for (var aluno of turma){
-    console.log(aluno.nome + " - " + aluno.media() )
+    this.media = function () {
+       return (this.nota1 + this.nota2) /2;
+    }
 }
 
-turma.forEach(function (elemento){
-    console.log(elemento);
-})
 
+
+
+// var turma = [
+//     criarAluno("Herson", 9, 6),
+//     criarAluno("Joao", 10, 5),
+//     criarAluno("Marcela", 9, 8)
+// ]
+
+// var aluno = turma[0];
+
+//E para realizar aquele passo anterior, é preciso realizar esse procedimento abaixo, chamado de instância, cada um é um objeto diferente e não tem relação um com o outro, como cada um fosse um objeto, já emcima é só 1 objeto.
+
+var a = new aluno("Igor", 8, 7);
+var a = new aluno ("João", 6, 7);
+
+console.log(a.media());
