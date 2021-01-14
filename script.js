@@ -1,60 +1,52 @@
-//Quando um objeto tem uma variável, temos nesse caso uma propriedade, mas quando temos uma função, vamos ter um método!
 
-var aluno = {
-            nome: "Herson", 
-            notas : [7, 8],
-            
-            media: function(n1, n2){
-                return (n1 + n2) / 2;
-            }
-}            
-
-
-var aluno1 = {
-    nome: "Joao", 
-    notas : [5, 8],
-    
-    media: function(n1, n2){
-        return (n1 + n2) / 2;
-    }
-}   
-
-console.log(aluno.nome); 
-console.log(aluno.media(aluno.notas[0], aluno.notas[1])); 
-
-console.log(aluno1.nome); 
-console.log(aluno1.media(aluno1.notas[0], aluno1.notas[1])); 
-
-
-//Nesse exemplo agora, nós iremos alterar para que a forma de exibição do console.log fique mais simplificada, pois no exemplo a cima temos muitas coisas escritas. Vamos mudar a função para deixá-las mais simplificadas. Ex. abaixo:
-
-//Lembrar que temos que o usar o (this.) na função, pois conforme o inglês ele aponta algo que está próximo. Então, se chamar só a função sem determinar o this, vai dar erro pois tem mais de uma nota, mas colocando o (this.) ele vai colocar o valor da função que está dentro do objeto, sendo então o valor mais próximo.
-
-
-function calcMedia(){   
-    return (this.notas[0] + this.notas[1]) / 2;
-
-} 
-
-var aluno2 = {
-    nome: "Vitor", 
-    notas : [7, 8],
-    
-    media: calcMedia
+var calcMedia = function(){
+    return (this.nota1 + this.nota2) / 2;
 }
-           
 
 
-var aluno3 = {
-nome: "Amanda", 
-notas : [5, 8],
+var turma = [
+       {    
+            nome: "Igor",
+            nota1: 9,
+            nota2: 7,
+            media: calcMedia
+        },
+        {
+            nome: "Joao",
+            nota1: 6,
+            nota2: 5,
+            media: calcMedia
+        } 
 
-media: calcMedia
-}   
+]
 
+var aluno = turma[0];
+console.log(aluno);
+console.log(aluno.media());
 
-console.log(aluno2.nome); 
-console.log(aluno2.media()); 
+//Pronto, abaixo nós vamos colocar uma forma simplificada e com menor chances de erros, pois se por acaso digitar o nota1 como not1, daria erro e dificultaria ficar procurando e trabalhando com um código grande. A turma continua como um array, mas nesse caso só atribuímos o valor a função, e a média que antes era uma variável fora, foi colocada dentro do objeto também para simplificar.
 
-console.log(aluno3.nome); 
-console.log(aluno3.media()); 
+// Ressaltando que esse return dentro da função, está retornando um objeto.
+
+function criarAluno(nome2, n3, n4){
+    
+    return {
+        nome2: nome2,
+        nota3: n3,
+        nota4: n4,
+        media: function() {
+            return (this.nota3 + this.nota4) / 2;
+        }
+    }
+}
+
+var turma2 = [
+    criarAluno("Herson", 9, 6),
+    criarAluno("Joao", 10, 5),
+    criarAluno("Marcela", 9, 8)
+]
+
+var aluno2 = turma2[0];
+console.log(aluno2);
+console.log(aluno2.media());
+
