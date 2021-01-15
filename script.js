@@ -1,44 +1,51 @@
-
-// function criarAluno(nome, n1, n2){
-    
-//     return {
-//         nome: nome,
-//         nota1: n1,
-//         nota2: n2,
-//         media: function() {
-//             return (this.nota1 + this.nota2) / 2;
-//         }
-//     }
-// }
-
-//O próximo passo de aula, vai ser transformar a função acima que retorna um objeto em um objeto de verdade.
+// Aula de resumão de objetos, mostrando as três diferentes formas de construir um.
 
 
-function aluno(nome, n1, n2){
+var a = {
+    nome: "Igor",
+    sobrenome: "Oliveira"
+}
 
-    this.nome = nome;
-    this.nota1 = n1;
-    this.nota2 = n2;
+console.log(a);
+console.log(a.nome);
+console.log(a.sobrenome);
 
-    this.media = function () {
-       return (this.nota1 + this.nota2) /2;
+
+
+
+
+
+//Essa segunda forma é o objeto dentro de uma função. Reparas nas formas que podemos chamar no console.log.
+
+function bbj(n, l){
+    return {
+        name: n,
+        lastname: l
     }
 }
 
+var english = bbj("Herson", "Meireles")
+
+
+console.log(english);
+console.log(english.name);
+console.log(english["lastname"]);
 
 
 
-// var turma = [
-//     criarAluno("Herson", 9, 6),
-//     criarAluno("Joao", 10, 5),
-//     criarAluno("Marcela", 9, 8)
-// ]
 
-// var aluno = turma[0];
 
-//E para realizar aquele passo anterior, é preciso realizar esse procedimento abaixo, chamado de instância, cada um é um objeto diferente e não tem relação um com o outro, como cada um fosse um objeto, já emcima é só 1 objeto.
 
-var a = new aluno("Igor", 8, 7);
-var a = new aluno ("João", 6, 7);
+//A terceira forma é uma mais elaborada, que gera as INSTÂNCIAS, que tbm precisa utilizar o (new).
 
-console.log(a.media());
+function abc(e, m){
+
+    this.nome1 = e;
+    this.sobrenome2 = m;
+}
+
+var c = new abc("Ivson", "Antonio")
+
+console.log(c);
+console.log(c.nome1);
+console.log(c["sobrenome2"]);
